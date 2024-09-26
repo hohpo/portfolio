@@ -1,0 +1,33 @@
+@media screen and (max-width: 375px) {
+    .slider video, 
+    .swiper-slide video {
+        width: auto;
+        height: auto; 
+    }
+
+    /* Optional: Adjust container padding/margins for better fit on smaller screens */
+    .section {
+        padding: 5rem 0;
+    }
+
+    .header a {
+        font-size: 14px; 
+    }
+
+    .header {
+        padding: 10px; 
+    }
+    main {
+        padding-top: 100px;
+
+    }
+
+    #profile .box-b {
+        width: 100%; 
+        height: auto; 
+        padding: 20px; 
+        text-align: center;
+    }
+ 
+}
+

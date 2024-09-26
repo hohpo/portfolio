@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+@media screen and (max-width: 1140px) {
+    main .container {
+        width: 992px;
+    }
+
+    .container {
+        width: 600px;
+    }
+
+    .about-self .left {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    .about-self .right {
+        width: 100%;
+        padding: 0;
+    }
+
+    .do-me .do-inner {
+        width: 48%;
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+    }
+
+    .do-me .do-inner:nth-child(2n+1) {
+        margin-right: 4%;
+    }
+
+    .portfolio-me .portfolio-inner {
+        width: 48%;
+        margin-right: 0;
+    }
+
+    .portfolio-me .portfolio-inner:nth-child(2n+1) {
+        margin-right: 4%;
+    }
+
+    .contact-me .left {
+        width: 100%;
+    }
+
+    .contact-me .right {
+        width: 100%;
+        margin-left: 0;
+    }
+}

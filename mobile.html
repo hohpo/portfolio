@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSEOK PORTFOLIO</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/mobiles.css">
+    <link rel="icon" href="favicon.ico">
+    <!-- 써봄 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- 써봄 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/mobile.js" defer></script>
+</head>
+
+<body>
+    <!-- Fixed Header -->
+    <div class="header">
+        <a href="#profile">Profile</a>
+        <a href="#video">Video</a>
+        <a href="#picture">Picture</a>
+    </div>
+    
+
+    <main>
+        <!-- Portfolio section with clock -->
+        <div id="portfolio" class="section">
+            <div class="clock">
+                <div class="clock-hand hour-hand"></div>
+                <div class="clock-hand minute-hand"></div>
+                <div class="clock-hand cho-hand"></div>
+                <div class="circle"></div>
+            </div>
+            <h1>PORTFOLIO</h1>
+        </div>
+        <!-- Sections -->
+        <div id="profile" class="section">
+            <div class="profile">PROFILE</div>
+            <div class="box-b">
+                <div class="card">
+
+                    <div class="info-text">
+                        <h3>NAME</h3>
+                        <p>InSeok Han</p>
+                    </div>
+                </div>
+                <div class="card">
+
+                    <div class="info-text">
+                        <h3>PHONE</h3>
+                        <p>010-6649-0246</p>
+                    </div>
+                </div>
+                <div class="card">
+
+                    <div class="info-text">
+                        <h3>EMAIL</h3>
+                        <p>hohpo1@naver.com</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="info-text">
+                        <h3>BIRTH</h3>
+                        <p>1993.11.21</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Video Section with Slider -->
+        <div id="video" class="section">
+            <div class="video">VIDEO</div>
+            <div class="slider">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+
+
+
+                            <figure>
+                                <video src="video/vid1.mp4" autoplay loop muted playsline></video>
+                            </figure>
+                            </video>
+                        </div>
+                        <div class="swiper-slide">
+
+
+
+                            <figure>
+                                <video src="video/vid2.mp4" autoplay loop muted playsline></video>
+                            </figure>
+                            </video>
+                        </div>
+                        <div class="swiper-slide">
+
+
+
+                            <figure>
+                                <video src="video/vid3.mp4" autoplay loop muted playsline></video>
+                            </figure>
+                            </video>
+                        </div>
+                        <div class="swiper-slide">
+
+
+
+
+                            <figure>
+                                <video src="video/vid4.mp4" autoplay loop muted playsline></video>
+                            </figure>
+                            </video>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Picture Section with Slider -->
+        <div id="picture" class="section">
+            <div class="picture">PICTURE</div>
+            <div class="slider">
+                <div class="swiper mySwipers">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="box-item"><img src="images/mock1.png" alt=""></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="box-item"><img src="images/mock2.png" alt=""></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="box-item"><img src="images/mock3.png" alt=""></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="box-item"><img src="images/mock4.png" alt=""></div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <div class="end">
+                Thank You
+            </div>
+    </main>
+
+
+    <script>
+
+        var swiper2 = new Swiper(".mySwipers", {
+            pagination: {
+                el: ".swiper-pagination",
+                type: "progressbar",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+    <!-- 열긴 -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            cssMode: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            mousewheel: true,
+            keyboard: true,
+        });
+        
+    </script>
+
+</body>
+
+</html>
