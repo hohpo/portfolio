@@ -26,9 +26,7 @@
     function deleteTxt() {
         currentTxt.pop()
         // pop():배열 요소를 끝에서부터 삭제
-
         spanEl.textContent = currentTxt.join('')
-
         if (currentTxt.length !== 0) {
             setTimeout(deleteTxt, math.floor(Math.random() * 100))
         } else {
@@ -156,23 +154,6 @@ close.addEventListener('click', function () {
     popup.querySelector('video').pause()
 })
 
-// 여기는 클릭했을떄움직이는
-
-// $(function () {
-//     $('.button-container button').click(function () {
-//         let idx = $(this).index()
-//         let section = $('main > section').eq(idx)
-//         let sectionDistance = section.offset().top
-
-//         $('html, body').animate({
-//             scrollTop: sectionDistance
-//         })
-//         $('main > section').removeClass('on')
-//         $('main > section').eq(idx).addClass('on')
-//     })
-// })
-
-
 $(document).ready(function() {
     // 스크롤 애니메이션
     $('.button-container .button').click(function() {
@@ -182,7 +163,7 @@ $(document).ready(function() {
             targetSection = '.one';
         } else if ($(this).find('span').text() === 'VIDEO') {
             targetSection = '.two';
-        } else if ($(this).find('span').text() === 'PICTURE') {
+        } else if ($(this).find('span').text() === 'POSTER') {
             targetSection = '.three';
         }
 
@@ -205,59 +186,34 @@ $(document).ready(function() {
             $('.one .button').css('background-color', '');
         }
     });
-});
 
-
-
-
-
-//     $(window).scroll(function(){
-//         console.log($(window).scrollTop())
-//         if($(window).scrollTop() > 2700) {
-//             $('main > section').removeClass('on')
-//             $('main > section').eq(2).addClass('on')
-//         }else if($(window).scrollTop() > 1800){
-//             $('main > section').removeClass('on')
-//             $('main > section').eq(1).addClass('on')
-//         }else if($(window).scrollTop() > 500){
-//             $('main > section').removeClass('on')
-//             $('main > section').eq(0).addClass('on')
-
-//         }
-//     })
-// })
+    $('.three .box-item').click(function() {
+        var video = $(this).find('video')[0];  
+        video.muted = !video.muted; 
+    });
 
 // 여기서부터는 스크롤내릴때 불들어오는거
+    $(window).scroll(function () {
+        $('#section > section').each(function () {
+        if($(this).offset().top<=$(window).scrollTop() +50){
+            $('.sc button').removeClass('on')
+            let idx = $(this).index()
+            $('.sc button').eq(idx).addClass('on')
+        }
 
-$(function(){
-$(window).scroll(function () {
-    $('#section > section').each(function () {
-     if($(this).offset().top<=$(window).scrollTop() +50){
-        $('.sc button').removeClass('on')
-        let idx = $(this).index()
-        $('.sc button').eq(idx).addClass('on')
-     }
+        })
+        // 여기서부터는 스크롤 내리면 이미지바뀌는것
+        // 만약에 WINDOW 스크롤탑이 3900 이상이면/ .ONE 안에 있는 것들 HIDE, 이미지 보여라!
+        if($(window).scrollTop()>=3700 ){
+            $('.one .sc').hide()
+            $('.one .aa').show()
+        }
+        else{
+            $('.one .sc').show()
+            $('.one .aa').hide()
+        }
 
-    })
-    // 여기서부터는 스크롤 내리면 이미지바뀌는것
-    console.log($(this).scrollTop())
-    // 만약에 WINDOW 스크롤탑이 3900 이상이면/ .ONE 안에 있는 것들 HIDE, 이미지 보여라!
-    if($(window).scrollTop()>=3900 ){
-        $('.one .sc').hide()
-        $('.one .aa').show()
-    }
-    else{
-        $('.one .sc').show()
-        $('.one .aa').hide()
-    }
-
-})
-
-
-})
-
-
-$(document).ready(function() {   
+    }) 
     setInterval(function() {
         $('.end').fadeIn(1000).delay(2000).fadeOut(1000);
     }, 3000); 

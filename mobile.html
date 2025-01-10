@@ -8,13 +8,11 @@
     <title>INSEOK PORTFOLIO</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/mobile.css">
-    <link rel="stylesheet" href="css/mobiles.css">
     <link rel="icon" href="favicon.ico">
     <!-- 써봄 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
-    
     <!-- 써봄 -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -22,16 +20,12 @@
 </head>
 
 <body>
-    <!-- Fixed Header -->
     <div class="header">
         <a href="#profile">Profile</a>
         <a href="#video">Video</a>
-        <a href="#picture">Picture</a>
+        <a href="#picture">Moving poster</a>
     </div>
-    
-
     <main>
-        <!-- Portfolio section with clock -->
         <div id="portfolio" class="section">
             <div class="clock">
                 <div class="clock-hand hour-hand"></div>
@@ -41,26 +35,22 @@
             </div>
             <h1>PORTFOLIO</h1>
         </div>
-        <!-- Sections -->
         <div id="profile" class="section">
             <div class="profile">PROFILE</div>
             <div class="box-b">
                 <div class="card">
-
                     <div class="info-text">
                         <h3>NAME</h3>
                         <p>InSeok Han</p>
                     </div>
                 </div>
                 <div class="card">
-
                     <div class="info-text">
                         <h3>PHONE</h3>
                         <p>010-6649-0246</p>
                     </div>
                 </div>
                 <div class="card">
-
                     <div class="info-text">
                         <h3>EMAIL</h3>
                         <p>hohpo1@naver.com</p>
@@ -75,24 +65,22 @@
 
             </div>
         </div>
-
-        <!-- Video Section with Slider -->
         <div id="video" class="section">
             <div class="video">VIDEO</div>
             <div class="slider">
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                                <video src="video/vid1.mp4" autoplay loop muted playsinline></video>
+                                <video src="video/Sequence.mp4" autoplay loop muted playsinline></video>
                         </div>
                         <div class="swiper-slide">
-                                <video src="video/vid2.mp4" autoplay loop muted playsinline></video>
+                                <video src="video/수도권 매립지 정책 홍보_그린이들  .mp4" autoplay loop muted playsinline></video>
                         </div>
                         <div class="swiper-slide">
-                                <video src="video/vid3.mp4" autoplay loop muted playsinline></video>
+                                <video src="video/비교타이포.mp4" autoplay loop muted playsinline></video>
                         </div>
                         <div class="swiper-slide">
-                                <video src="video/vid4.mp4" autoplay loop muted playsinline></video>
+                                <video src="video/책광고Final.mp4" autoplay loop muted playsinline></video>
                         </div>
                     </div>
                     <div class="swiper-button-next"></div>
@@ -101,24 +89,16 @@
                 </div>
             </div>
         </div>
-
-        <!-- Picture Section with Slider -->
         <div id="picture" class="section">
-            <div class="picture">PICTURE</div>
+            <div class="picture">Moving Poster</div>
             <div class="slider">
                 <div class="swiper mySwipers">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <div class="box-item"><img src="images/mock1.png" alt=""></div>
+                            <div class="box-item"><video src="images/moving1.mp4" autoplay muted loop></video></div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="box-item"><img src="images/mock2.png" alt=""></div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="box-item"><img src="images/mock3.png" alt=""></div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="box-item"><img src="images/mock4.png" alt=""></div>
+                            <div class="box-item"><video src="images/moving2.mp4" autoplay muted loop></video></div>
                         </div>
                     </div>
                     <div class="swiper-button-next"></div>
@@ -130,8 +110,6 @@
                 Thank You
             </div>
     </main>
-
-
     <script>
 
         var swiper2 = new Swiper(".mySwipers", {
@@ -159,9 +137,6 @@
             mousewheel: true,
             keyboard: true,
         });
-        
     </script>
-
 </body>
-
 </html>
